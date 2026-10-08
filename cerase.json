@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "namespace": "studio.guidance",
+  "name": "business-document",
+  "type": "skill",
+  "display_name": "Business Document",
+  "description": "Applies when the person asks for a quote, an offer, a bid for a tender, a proposal, a report, a business letter or another document written for a client or for management, and when text has to go into a document that already exists, such as a Google Doc or a letterhead. Builds the document in five stages: a brief, an outline the person agrees, a Markdown draft, a revision that recomputes every figure with the calculator and traces every claim to its source, and a PDF rendered from the Markdown and delivered as an attachment. Not for a slide deck, which is the deck skill, nor for the text of an email, which is email-drafting.",
+  "license": "MIT"
+}
