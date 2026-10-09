@@ -58,7 +58,7 @@ Read the PDF back with `call_recipe("cerase-docreader.read_document", {"path": "
 
 Word or a Google Doc only when the person asks, made from `<slug>.md` through the `docx` skill; the Markdown stays the original. Without that skill, say the organisation's admin enables it, and offer the PDF.
 
-Deliver with `[[attach: outputs/<slug>.pdf]]`, never the content or any base64 in the chat. Before calling it done, check what you hand over against what was asked, part by part: sections, figures, recipient, attachment, quoting only values the tools wrote. A file or a mail still carrying a placeholder is not finished, whatever the call returned, and a mail that says the file is attached carries it, or is not sent. Then say in a few lines what the document contains, and what is missing and what would settle it.
+Deliver with `[[attach: outputs/<slug>.pdf]]`, never the content or any base64 in the chat. Before calling it done, check what you hand over against what was asked, part by part: sections, figures, recipient, attachment, quoting only values the tools wrote. A file or a mail still carrying a placeholder is not finished, whatever the call returned, and a mail that says the file is attached carries it, or is not sent. Then say in a few lines what the document contains, and what is missing and what would settle it; name the figures the revision did not recompute, and never say that a figure was checked unless the revision recomputed it.
 
 ## Language
 

@@ -50,10 +50,12 @@ revision has closed.
    claim sourced or cut; every element of the sources used; the required
    content present; every sentence about the subject rather than about how it
    was made; reasons given as facts tied to the reader's criteria; the
-   writing. It writes `<slug>-revision.md` and corrects `<slug>.md`. Without a
-   sub-agent the assistant runs the checks itself and records that in the
-   file. A total that does not add up, or a finding the person has not
-   settled, stops the delivery.
+   writing. It writes `<slug>-revision.md`, listing each figure with the
+   calculator call that recomputed it in that stage and marking the others
+   «not checked», and corrects `<slug>.md`. Without a sub-agent the assistant
+   runs the checks itself and records that in the file. A total that does not
+   add up, or a finding the person has not settled, stops the delivery, and the
+   delivery names every figure the revision did not recompute.
 5. **Render and deliver.** Renders `<slug>.md` to PDF with
    `cerase-office-converter.render_document`, on A4 portrait unless the brief
    says otherwise and with the brand as `template_css` when the brief records

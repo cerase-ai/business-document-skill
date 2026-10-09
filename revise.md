@@ -33,6 +33,8 @@ List every number in `<slug>.md`: amounts, quantities, rates, percentages, dates
 2. Recompute every calculated figure now with the calculator in `SKILL.md`, from the source values and not from the draft's: `product` for days × rate, `sum` for every total, `calculate` for a percentage, `round` where the document rounds.
 3. Compare the printed figure with the calculator's answer, character by character in the document's printed form.
 
+Every figure this stage changes or carries is recomputed here, in this stage: a value the outline already computed is computed again now, and the revision file lists each figure with the call that recomputed it. A figure this stage did not recompute is marked «not checked» in the revision file, and the report to the person names it.
+
 Then the structure: every row and every column of each table sums to its total, the split by period sums to the grand total, and every total in the text equals the one in its table.
 
 A figure with no source and no calculation is a finding: it comes out, or the person supplies it. **A total that does not add up stops the stage**: correct it from the sources, or, when the sources disagree, tell the person which figure, what each source says and what the calculator gives, and wait for their answer.
@@ -83,6 +85,14 @@ Run by: <a sub-agent | the author, no sub-agent available>
 | Amounts by period | a | Area B, year 2 | 20 × 680 printed as 14.600; the calculator gives 13.600 | corrected, and the totals after it |
 | Why us | b | "response within 4 hours" | no source gives this service level | removed |
 
+## Figures
+
+| Figure | Printed as | The call that recomputed it |
+|---|---:|---|
+| Area B, year 2 | 13.600 | product(20, 680) |
+| Grand total | 38.080 | sum(24480, 13600) |
+| Premium, year 1 | 1.468,80 | not checked |
+
 ## Sections with no finding
 <their headings>
 
@@ -93,5 +103,5 @@ Run by: <a sub-agent | the author, no sub-agent available>
 ## Closing the stage
 
 1. After the corrections, run check (a) once more on every figure the corrections touched and on every total.
-2. Tell the person, in their language, how many figures were recomputed, the findings in full, and what is left open. Never "it looks fine".
+2. Tell the person, in their language, how many figures this stage recomputed and which it did not, the findings in full, and what is left open. Never "it looks fine".
 3. A finding left open is the person's to accept or not. While one is open, or while a total does not add up, the document is not rendered for delivery.
