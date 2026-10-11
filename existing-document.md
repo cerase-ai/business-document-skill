@@ -8,7 +8,7 @@ Stages 1, 2 and 4 of `SKILL.md` still apply to what you write: the brief, the ou
 
 1. **What it is.** `call_recipe("google-workspace.getDocumentInfo", {"documentId": "<id>"})`. When it has tabs, `call_recipe("google-workspace.listDocumentTabs", {"documentId": "<id>"})`, and pass the right `tabId` to every call below.
 2. **Its sections.** `call_recipe("google-workspace.readGoogleDoc", {"documentId": "<id>", "format": "markdown"})` gives the headings and paragraphs in order. Find the section your text belongs to.
-3. **The place and its style.** `call_recipe("google-workspace.getGoogleDocContent", {"documentId": "<id>", "includeFormatting": true})` gives each span with its indices, font, size and colour. For a long document read it in pages with `call_recipe("google-workspace.getGoogleDocContentPaginated", {"documentId": "<id>", "includeFormatting": true, "offset": 0, "limit": 50000})`. Note, for the paragraph before your text and the one after it: their start and end indices, their paragraph style, their font family, size and colour, and whether they are list items.
+3. **The place and its style.** For the paragraph before your text and the one after it, `call_recipe("google-workspace.describeGoogleDocRange", {"documentId": "<id>", "textToFind": "<a few words of that paragraph>"})` gives its start and end indices and its paragraph style, by name: `namedStyleType`, such as `NORMAL_TEXT` for body text or `HEADING_2` for a heading. `call_recipe("google-workspace.getGoogleDocContent", {"documentId": "<id>", "includeFormatting": true})` gives each span's font, size and colour; for a long document read it in pages with `call_recipe("google-workspace.getGoogleDocContentPaginated", {"documentId": "<id>", "includeFormatting": true, "offset": 0, "limit": 50000})`. Note, for both neighbours: their indices, their `namedStyleType`, their font family, size and colour, and whether they are list items.
 4. **Say where your text goes**, before any write, in the person's language: after which paragraph, before which heading, in which style, quoting a few words of each neighbour. When two places fit, ask which one.
 
 When the person has not said whether to change the original or work on a copy, ask. A copy is `call_recipe("google-workspace.copyFile", {"fileId": "<id>", "newName": "<title> — draft"})`.
@@ -19,8 +19,8 @@ When the person has not said whether to change the original or work on a copy, a
 - `call_recipe("google-workspace.insertText", {"documentId": "<id>", "text": "<your paragraphs, each ending with \n>", "index": <start index of the following paragraph>})`.
 - **Every write moves the indices after it.** Read the content again before the next write, or write from the end of the document towards its start.
 - **Plain text only.** `insertText` writes characters as they are, so Markdown syntax (`#`, `**`, `|`, `- `) appears in the document as symbols. Headings, bold and lists are applied after the text is in, with the calls below.
-- **Give your text the style of the section it joins**, over the indices it now occupies. Inserted text takes the style of the paragraph it was inserted into, so text placed just before a heading comes out as a heading until you set it:
-  - `call_recipe("google-workspace.applyParagraphStyle", {"documentId": "<id>", "startIndex": <start>, "endIndex": <end>, "namedStyleType": "<the neighbours' style, such as NORMAL_TEXT or HEADING_2>"})`, adding `alignment`, `spaceAbove` or `spaceBelow` when the neighbours differ from the style's default;
+- **After every `insertText`, set the paragraph style of what you inserted**, whatever it looks like. Inserted text takes the style of the paragraph it lands in: text placed at the start of a heading, an empty paragraph included, comes out as that heading, and nothing in its words shows it. So, over the indices your text now occupies:
+  - `call_recipe("google-workspace.applyParagraphStyle", {"documentId": "<id>", "startIndex": <start>, "endIndex": <end>, "namedStyleType": "<the body's style, NORMAL_TEXT for body text>"})`, then the same call with the heading's style over a title of yours, adding `alignment`, `spaceAbove` or `spaceBelow` when the neighbours differ from the style's default;
   - `call_recipe("google-workspace.applyTextStyle", {"documentId": "<id>", "startIndex": <start>, "endIndex": <end>, "fontFamily": "<font>", "fontSize": <size>, "foregroundColor": "<#hex>"})`, with `bold` or `italic` only where the neighbours have them;
   - when the neighbours are list items, `call_recipe("google-workspace.createParagraphBullets", {"documentId": "<id>", "startIndex": <start>, "endIndex": <end>, "bulletPreset": "<the neighbours' preset>"})`.
 - **A placeholder in a template**, such as a date or a recipient's name between brackets, is replaced in place, and the replacement keeps the placeholder's style: first `call_recipe("google-workspace.findAndReplaceInDoc", {"documentId": "<id>", "findText": "<placeholder>", "replaceText": "<value>", "matchCase": true, "dryRun": true})`, and only when it counts exactly the matches you mean, the same call without `dryRun`.
@@ -29,11 +29,12 @@ When the person has not said whether to change the original or work on a copy, a
 
 ## 3. After writing: read it back
 
-Read the area again with `getGoogleDocContent` and `"includeFormatting": true`, and check:
+Read what you wrote with `call_recipe("google-workspace.describeGoogleDocRange", {"documentId": "<id>", "startIndex": <start of your text>, "endIndex": <end of your text>})`, which names each paragraph's `namedStyleType`, and the area with `getGoogleDocContent` and `"includeFormatting": true`, and check:
 
 - your text sits between the two paragraphs you named to the person, and no word or sentence of theirs was split;
 - no Markdown symbol is left in it;
-- its paragraph style, font, size and colour are those of its neighbours.
+- every paragraph of yours, an empty one too, has the `namedStyleType` of the body around it, and a title of yours the one of the headings beside it;
+- its font, size and colour are those of its neighbours.
 
 Correct what does not hold with the style calls, then tell the person what the document now contains, from what you read back.
 
@@ -51,4 +52,4 @@ The answer names the file's path in your workspace; deliver it with `[[attach: <
 
 ## The calls
 
-These are the complete set for an existing document: `getDocumentInfo`, `listDocumentTabs`, `readGoogleDoc`, `getGoogleDocContent`, `getGoogleDocContentPaginated`, `copyFile`, `insertText`, `applyParagraphStyle`, `applyTextStyle`, `createParagraphBullets`, `findAndReplaceInDoc` and `downloadFile`, all of the `google-workspace` connector. Do not invent others. Without that connector, say in the person's language that writing into a Google Doc needs it, which the organisation's admin assigns, and offer the document as a PDF from stage 5.
+These are the complete set for an existing document: `getDocumentInfo`, `listDocumentTabs`, `readGoogleDoc`, `describeGoogleDocRange`, `getGoogleDocContent`, `getGoogleDocContentPaginated`, `copyFile`, `insertText`, `applyParagraphStyle`, `applyTextStyle`, `createParagraphBullets`, `findAndReplaceInDoc` and `downloadFile`, all of the `google-workspace` connector. Do not invent others. Without that connector, say in the person's language that writing into a Google Doc needs it, which the organisation's admin assigns, and offer the document as a PDF from stage 5.

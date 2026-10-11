@@ -14,6 +14,8 @@ When the person names or attaches material, such as a price sheet, a call for te
 
 A document somebody else wrote that you cannot open is asked for, never rebuilt from memory or from a summary.
 
+An earlier document of yours or of the organisation — the quote you made last time for the same client, a previous offer, a template — shows what was written before, and is not a source for a new one. A document you are completing is the source of what it already says. Read it for what the person may want again, then list under `Terms` every condition it carries that the sheet and the request do not, such as a validity, a payment or billing rhythm, a reporting cadence or a discount, and ask the person about each in the interview, quoting the earlier document. Only their answer makes it a source.
+
 Then list every element the sources offer the document: each line of the price sheet with its quantity, unit and rate; every split by period, such as years, quarters or phases; every option, premium, penalty, discount and condition the sheet or the request states; every requirement of the request, with the criteria the reader will score it on when the request gives them. An element of the sources that does not reach the document is left out by a decision written in the brief, never by oversight.
 
 ## 2. The interview
@@ -25,7 +27,7 @@ Ask in this order, one or two questions at a time, in the person's language. Whe
 3. **Objective.** The one thing the document must achieve: be chosen, have a budget approved, inform a decision, answer a request. For a quote or an offer: what is offered, to whom, for which period.
 4. **Required content.** The sections, figures, conditions, attachments and declarations the request, the client or the person require, with who requires each.
 5. **Depth.** The length in pages or words, and the level of detail: by area, by activity, by month.
-6. **Sources of the figures.** For every figure the document will carry, the file and the place in it. Where two sources disagree, ask which one holds.
+6. **Sources of the figures and terms.** For every figure and every condition the document will carry, the file and the place in it, or the person's answer. Where two sources disagree, ask which one holds. A term only an earlier document carries is asked here: «Nel preventivo precedente la validità era 90 giorni: la teniamo?».
 7. **The organisation and the person.** The material for the argument: what the organisation does and for whom, comparable work, numbers, certifications, the people who will do the work and their roles, and the role of the person you are writing for. Take it from what you have, such as the organisation's instructions, the sources or a profile the person points to, and ask for what is missing. Prefer facts that answer the reader's criteria. A fact about the organisation that nobody gave you is not added.
 8. **Form.** The format, PDF unless the person asks for Word or a Google Doc. Paper, A4 by default, and orientation, portrait by default. The brand: colours, fonts or CSS, or `default`. The title block: title, subtitle, author, date, recipient, reference, each only as given. Whether the text goes into a document that already exists, which `existing-document.md` then covers.
 9. **Language and tone.** The document's language, by default the person's, and the register: formal, neutral or direct.
@@ -36,6 +38,7 @@ Ask in this order, one or two questions at a time, in the person's language. Whe
 - The reader is concrete: a role in an organisation, not "the client".
 - The objective is one sentence.
 - Every figure the document will carry has a named source, or is listed under `Missing`.
+- Every term under `Terms` has a source or the person's answer, or is listed under `Missing`; none comes only from an earlier document.
 - Every fact for the argument has a source.
 - Every element of the sources is either in `Use` or in `Leave out` with its reason.
 
@@ -76,6 +79,9 @@ Write `<slug>-brief.md` with these headings exactly, in short bullets:
 
 ### Leave out
 - <element of the sources> — <the reason, and who decided>
+
+## Terms
+- <validity, payment rhythm, reporting cadence, …> — <the file and place> | — <the person's answer, with its date>
 
 ## The organisation, for the argument
 - <fact> — <source>

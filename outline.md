@@ -61,6 +61,9 @@ Sources: <the brief's source lines this section draws on>
 # Checks
 - <each sum that must hold, with the calculator's answer>
 
+# Terms
+- <validity, payment rhythm, …> — <the brief's source or the person's answer> | assumed — <the earlier document it was seen in>
+
 # Missing
 - <datum> — <who can give it>
 ```
@@ -69,4 +72,4 @@ Sources: <the brief's source lines this section draws on>
 
 ## 5. Agree it with the person
 
-Show the outline in the chat, in the person's language: each section with its sentence, the grand total with its split by area and by period, and what is missing. Ask whether it holds or what to change. Update the file with their changes, and start the draft only after they agree.
+Show the outline in the chat, in the person's language: each section with its sentence, the grand total with its split by area and by period, each term taken only from an earlier document with the question that would settle it, and what is missing. Ask whether it holds or what to change. Update the file with their changes, and start the draft only after they agree.

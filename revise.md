@@ -12,7 +12,7 @@ The author knows what each line meant and what each figure was supposed to be, s
 |---|---|---|
 | The document | `<slug>.md` | the text under review, and where the corrections go |
 | The figures | the `Figures` and `Checks` blocks of `<slug>-outline.md` | what each figure should be and where it comes from |
-| The sources | the files and places the brief's `Sources` block lists | tracing every figure and claim |
+| The sources | the files and places the brief's `Sources` block lists, and the person's answers under `Terms` | tracing every figure, term and claim |
 | The reader | the `Reader`, `Required content`, `Use` and `The organisation, for the argument` blocks of `<slug>-brief.md` | who reads it, what must be there, which facts are given |
 
 ## Who runs the checks
@@ -39,9 +39,9 @@ Then the structure: every row and every column of each table sums to its total, 
 
 A figure with no source and no calculation is a finding: it comes out, or the person supplies it. **A total that does not add up stops the stage**: correct it from the sources, or, when the sources disagree, tell the person which figure, what each source says and what the calculator gives, and wait for their answer.
 
-### (b) Nothing invented
+### (b) Nothing invented, and nothing carried over
 
-Read the document for each of these by name: discounts, deadlines and dates, names of people, companies or products, guarantees and service levels, references and past clients, certifications, promised results. Each one traces to a source or to something the person said; whatever does not comes out, even when it reads as normal for this kind of document.
+Read the document for each of these by name: discounts, deadlines and dates, validity, payment and billing rhythms, reporting cadences, names of people, companies or products, guarantees and service levels, references and past clients, certifications, promised results. Each one traces to a source the brief lists, to the request, or to an answer of the person the brief records; whatever does not comes out, even when it reads as normal for this kind of document. An earlier document is not a source: a term that only an earlier quote or offer carries is a finding, listed as «assumed» in the `Terms` table below, and it stays in the document only once the person confirms it.
 
 ### (c) Every claim, sourced or cut
 
@@ -93,6 +93,13 @@ Run by: <a sub-agent | the author, no sub-agent available>
 | Grand total | 38.080 | sum(24480, 13600) |
 | Premium, year 1 | 1.468,80 | not checked |
 
+## Terms
+
+| Term | Printed as | Source |
+|---|---|---|
+| Validity | 60 giorni | price sheet, tab Conditions, row 5 |
+| Billing | mensile | assumed — only the quote of 6 October carries it; asked the person |
+
 ## Sections with no finding
 <their headings>
 
@@ -103,5 +110,5 @@ Run by: <a sub-agent | the author, no sub-agent available>
 ## Closing the stage
 
 1. After the corrections, run check (a) once more on every figure the corrections touched and on every total.
-2. Tell the person, in their language, how many figures this stage recomputed and which it did not, the findings in full, and what is left open. Never "it looks fine".
+2. Tell the person, in their language, how many figures this stage recomputed and which it did not, each term marked assumed and where it came from, the findings in full, and what is left open. Never "it looks fine".
 3. A finding left open is the person's to accept or not. While one is open, or while a total does not add up, the document is not rendered for delivery.
