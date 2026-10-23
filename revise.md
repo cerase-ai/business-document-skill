@@ -43,9 +43,11 @@ A figure with no source and no calculation is a finding: it comes out, or the pe
 
 Read the document for each of these by name: discounts, deadlines and dates, validity, payment and billing rhythms, reporting cadences, names of people, companies or products, guarantees and service levels, references and past clients, certifications, promised results. Each one traces to a source the brief lists, to the request, or to an answer of the person the brief records; whatever does not comes out, even when it reads as normal for this kind of document. An earlier document is not a source: a term that only an earlier quote or offer carries is a finding, listed as «assumed» in the `Terms` table below, and it stays in the document only once the person confirms it.
 
-### (c) Every claim, sourced or cut
+Each term is printed with its source's words: open the source and compare them word by word, every number and what it runs from included. A term that differs from its source is a finding, and so is one quoted differently in what you write to the person.
 
-Every statement about the organisation, the reader, the market or a third party has its source in the brief or in a document the person gave. A claim with no source comes out. In a report, an estimate or an inference of ours is marked as ours inside its sentence.
+### (c) Every claim, traced to a named source
+
+List every statement about the organisation, the offer and its price, the reader, the market or a third party, `Why us` and the premise first. For each, name its source, a file and the place in it, the request, or an answer of the person the brief records, and read that source's words again. A claim no named source says comes out, even one that reads as usual for this kind of document, such as no extra costs, an all-inclusive price or years of experience. A claim wider than its source is cut back to what the source says. In a report, an estimate or an inference of ours is marked as ours inside its sentence. Each claim goes in the `Claims` table of the revision file with its source.
 
 ### (d) The sources, used
 
@@ -99,6 +101,13 @@ Run by: <a sub-agent | the author, no sub-agent available>
 |---|---|---|
 | Validity | 60 giorni | price sheet, tab Conditions, row 5 |
 | Billing | mensile | assumed — only the quote of 6 October carries it; asked the person |
+
+## Claims
+
+| Claim | Section | Source |
+|---|---|---|
+| Travel included within 50 km of the office | Conditions | price sheet, tab Conditions, row 4 |
+| One daily rate for every area | Why us | price sheet, tab Estimate, column D |
 
 ## Sections with no finding
 <their headings>

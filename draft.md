@@ -36,7 +36,7 @@ Each section opens with the sentence the outline gave it, and the rest of the se
 - **Premise.** Who asked for what, with the request's reference and date, in two to four sentences. No praise of the client.
 - **Scope by area.** For each area, what we do and what the reader gets from it, in the reader's terms: the activities, how often, who does them, what they produce. A line of the price sheet names a cost item and says nothing about the work: never copy its labels as the scope. The effort per area comes from the outline's figures.
 - **Amounts by period.** A table with the areas as rows and the periods as columns, as the sources split them, with a total for each row and each column and the grand total. Then the unit and the basis: days and daily rate, the currency, and whether tax is included, as the source states it. Premiums, options and penalties the sources carry each get their own row or line.
-- **Conditions.** Payment terms, what is included and excluded, premiums and penalties: only those the sources or the person state.
+- **Conditions.** Payment terms, what is included and excluded, premiums and penalties: only those the sources or the person state, in their words.
 - **Validity.** The period the brief gives. Without one, ask; a customary default is still an invented term.
 - **Why us.** The reasons from the outline, each a fact about the organisation tied to what the reader needs or scores: comparable work done, a figure, a certification, the people on the job and their roles, with names only as given. Words like leading, excellent or tailored give the reader nothing to check: write the fact that would justify them instead.
 - **Report.** The conclusion first, in the summary; then the evidence for it, section by section. A report built on several searches or sources names any that failed and what that leaves out, because it limits what the reader may conclude.
@@ -63,7 +63,8 @@ Every figure is copied from the outline's `Printed as` column, never typed from 
 - [ ] Every section of the outline is there, opening with its sentence.
 - [ ] Every element under `Use` in the brief appears.
 - [ ] Every figure is in the outline's figures table, printed as it says.
-- [ ] Every claim about the organisation, the reader or a third party has a source in the brief.
+- [ ] Every claim about the organisation, the offer and its price, the reader or a third party has a source in the brief, and says no more than it.
+- [ ] Every term is printed with its source's words.
 - [ ] No discount, deadline, date, name, guarantee, reference or promised result that nobody gave.
 - [ ] `Why us` holds facts, each tied to the reader.
 - [ ] No slogan, no filler, no sentence about the making of the document.
